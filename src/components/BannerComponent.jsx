@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Col, Container, Row } from "reactstrap";
+import { Container } from "reactstrap";
 import { getPartners } from "../api/services/homeService";
 import {
   Hero,
@@ -21,7 +21,7 @@ export const BannerComponent = ({ heroImage }) => {
       .catch((error) => alert(error.response.data));
   };
   return (
-    <Hero imgUrl={heroImage}>
+    <Hero imgUrl={heroImage} fluid>
       <Container className="my-auto">
         <Wrapper>
           <WrapperText>

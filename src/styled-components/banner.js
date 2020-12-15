@@ -7,11 +7,10 @@ const Hero = styled.div`
       rgba(0, 37, 108, 0.6250875350140056) 0%,
       rgba(4, 172, 164, 0.5914740896358543) 100%
     ),
-    url(${(props) => props.imgUrl});
+    url(${({ imgUrl }) => imgUrl});
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 100%;
   height: 635px;
   margin-top: -78px;
 
@@ -24,8 +23,12 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
-  top: 10rem;
+  top: 5rem;
   padding: 10px;
+
+  @media only screen and (max-width: 768px) {
+    top: 7rem;
+  }
 `;
 
 const WrapperText = styled.div`
@@ -52,7 +55,10 @@ const WrapperText = styled.div`
   @media only screen and (max-width: 768px) {
     width: 100%;
     h1 {
-      font-size: 38px;
+      font-size: 30px;
+    }
+    p {
+      font-size: 14px;
     }
   }
 `;
@@ -102,6 +108,7 @@ const OurPartner = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 0;
   div {
     img {
       width: 100%;

@@ -18,8 +18,8 @@ const NavbarComponent = () => {
 
   const toggle = () => setIsOpen(!isOpen);
   return (
-    <Container className="p-0">
-      <Navbar expand="md" light>
+    <Navbar expand="md" light>
+      <Container>
         <NavbarBrand href="/">
           <img
             src="https://refactory.id/wp-content/uploads/2020/01/refactory-hd-125x52.png"
@@ -48,8 +48,8 @@ const NavbarComponent = () => {
             </NavItem>
           </Nav>
         </Collapse>
-      </Navbar>
-    </Container>
+      </Container>
+    </Navbar>
   );
 };
 
