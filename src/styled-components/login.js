@@ -8,4 +8,15 @@ const FormLogin = styled.div`
   }
 `;
 
-export { FormLogin };
+const InputGroup = styled.div`
+  position: relative;
+
+  svg {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+  }
+`;
+
+export { FormLogin, InputGroup };
