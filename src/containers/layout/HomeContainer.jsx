@@ -9,7 +9,7 @@ import {
 } from "../../styled-components/home";
 import { getAsSeeOn } from "../../api/services/homeService";
 
-export default function HomeComponent() {
+export default function HomeContainer() {
   const [seeOnList, setSeeOnList] = useState([]);
 
   useEffect(() => {

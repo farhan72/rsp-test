@@ -3,6 +3,7 @@ import cookies from "js-cookie";
 import { authAPI } from "../api/baseAPI";
 import { Form, Input, Button, Row, Col, Alert } from "antd";
 import { Redirect, useHistory } from "react-router-dom";
+import { LoaderComponent } from "../components/LoaderComponent";
 const layout = {
   labelCol: {
     span: 4,
@@ -18,12 +19,14 @@ export default function LoginContainer() {
     error: false,
     message: "",
   });
+  const [loading, setLoading] = useState(true);
 
   const login = (values) => {
     callAPILogin(values);
   };
 
   const callAPILogin = (request) => {
+    setLoading(true);
     setStatus({
       error: false,
       message: "",
@@ -31,6 +34,7 @@ export default function LoginContainer() {
     authAPI
       .post("login", request)
       .then((result) => {
+        setLoading(false);
         if (result.status === 200) {
           cookies.set("accessToken", result.data.token, {
             expires: 7,
@@ -40,6 +44,7 @@ export default function LoginContainer() {
         }
       })
       .catch((error) => {
+        setLoading(false);
         if (error.response.data) {
           setStatus({
             error: true,
@@ -110,6 +115,7 @@ export default function LoginContainer() {
           </Form.Item>
         </Form>
       </Col>
+      <LoaderComponent show={loading} />
     </Row>
   );
 }
