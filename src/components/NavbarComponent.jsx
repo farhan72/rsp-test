@@ -1,7 +1,7 @@
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 import {
   Collapse,
   Container,
@@ -14,9 +14,10 @@ import {
 } from "reactstrap";
 import "../css/navbar.css";
 
-const NavbarComponent = () => {
+const NavbarComponent = ({ match }) => {
   const [isOpen, setIsOpen] = useState(false);
   const history = useHistory();
+  const location = useLocation();
 
   const toggle = () => setIsOpen(!isOpen);
   const redirect = (page) => history.push(page);
@@ -35,10 +36,20 @@ const NavbarComponent = () => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavItem>
-              <NavLink onClick={() => redirect("/")}>Home</NavLink>
+              <NavLink
+                onClick={() => redirect("/")}
+                className={location.pathname === "/" ? "active" : ""}
+              >
+                Home
+              </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink onClick={() => redirect("/courses")}>Courses</NavLink>
+              <NavLink
+                onClick={() => redirect("/courses")}
+                className={location.pathname === "/courses" ? "active" : ""}
+              >
+                Courses
+              </NavLink>
             </NavItem>
             <NavItem>
               <NavLink onClick={() => redirect("/")}>Custom Training</NavLink>
@@ -47,7 +58,12 @@ const NavbarComponent = () => {
               <NavLink onClick={() => redirect("/")}>Case Studies</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink onClick={() => redirect("/blogs")}>Blogs</NavLink>
+              <NavLink
+                onClick={() => redirect("/blogs")}
+                className={location.pathname === "/blogs" ? "active" : ""}
+              >
+                Blogs
+              </NavLink>
             </NavItem>
           </Nav>
         </Collapse>

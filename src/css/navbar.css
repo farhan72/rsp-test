@@ -13,6 +13,10 @@
   color: #ec930e !important;
 }
 
+.active {
+  color: #ec930e !important;
+}
+
 .navbar .btn {
   display: block;
   border: none;

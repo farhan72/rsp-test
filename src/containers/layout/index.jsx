@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, withRouter } from "react-router-dom";
 import { BannerComponent } from "../../components/BannerComponent";
 import { FooterComponent } from "../../components/FooterComponent";
 import { LoaderComponent } from "../../components/LoaderComponent";
@@ -7,7 +7,7 @@ import NavbarComponent from "../../components/NavbarComponent";
 import HomeContainer from "./HomeContainer";
 import CoursesContainer from "./CoursesContainer";
 
-export default function index() {
+function Index() {
   return (
     <div style={{ height: "100%" }}>
       <NavbarComponent />
@@ -38,3 +38,4 @@ export default function index() {
     </div>
   );
 }
+export default withRouter(Index);
