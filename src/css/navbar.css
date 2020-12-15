@@ -1,12 +1,53 @@
 .container {
   font-family: "Montserrat", sans-serif;
-}
-
-.nav-item {
-  margin-right: 15px;
+  z-index: 9999;
 }
 
 .nav-link {
   font-size: 16px;
-  color: #ffffff;
+  font-weight: bold;
+  color: #ffffff !important;
+}
+
+.nav-link:hover {
+  color: #ec930e !important;
+}
+
+.navbar .btn {
+  display: block;
+  border: none;
+  background-color: transparent;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99999;
+  }
+  .navbar-nav {
+    padding-top: 10px;
+  }
+  .navbar-nav .nav-item:first-child {
+    border-top: 1px solid #ffffff;
+  }
+  .navbar-nav .nav-item:not(:last-child) {
+    border-bottom: 1px solid #ffffff;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .navbar {
+    z-index: 99999;
+    background: transparent;
+  }
+  .navbar .btn {
+    display: none;
+  }
+  .nav-item {
+    margin-right: 15px;
+  }
 }

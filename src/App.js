@@ -1,4 +1,4 @@
-// import "./App.css";
+import "./App.css";
 import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 import LoginContainer from "./containers/LoginContainer";
 import LayoutContainer from "./containers/layout";
