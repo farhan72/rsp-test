@@ -1,5 +1,6 @@
-import React from "react";
-import { Container } from "reactstrap";
+import React, { useState, useEffect } from "react";
+import { Col, Container, Row } from "reactstrap";
+import { getPartners } from "../api/services/homeService";
 import {
   Hero,
   Wrapper,
@@ -9,6 +10,16 @@ import {
 } from "../styled-components/banner";
 
 export const BannerComponent = ({ heroImage }) => {
+  const [partners, setPartners] = useState([]);
+
+  useEffect(() => {
+    getDataPartners();
+  }, []);
+  const getDataPartners = () => {
+    getPartners()
+      .then((result) => setPartners(result.data.data))
+      .catch((error) => alert(error.response.data));
+  };
   return (
     <Hero imgUrl={heroImage}>
       <Container className="my-auto">
@@ -30,7 +41,13 @@ export const BannerComponent = ({ heroImage }) => {
           </div>
         </Wrapper>
       </Container>
-      <OurPartner></OurPartner>
+      <OurPartner>
+        {partners?.map((partner) => (
+          <div key={partner.id}>
+            <img src={partner.photo_url} alt={partner.name} />
+          </div>
+        ))}
+      </OurPartner>
     </Hero>
   );
 };

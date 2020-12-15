@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import cookies from "js-cookie";
-import { authAPI } from "../api/BaseAPI";
+import { authAPI } from "../api/baseAPI";
 import { Form, Input, Button, Row, Col, Alert } from "antd";
 const layout = {
   labelCol: {

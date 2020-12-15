@@ -58,6 +58,7 @@ const WrapperText = styled.div`
 `;
 
 const Button = styled.button`
+  position: relative;
   outline: none;
   border: none;
   color: #fff;
@@ -85,8 +86,9 @@ const Button = styled.button`
 
   @media only screen and (max-width: 768px) {
     margin-left: 5px;
-    width: 100%;
-    padding: 6px 30px;
+    margin-top: -3px;
+    left: 6%;
+    padding: 5px 30px;
   }
 `;
 
@@ -95,8 +97,24 @@ const OurPartner = styled.div`
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #dedede;
-  padding: 15px;
+  background-color: rgba(0, 75, 102, 0.4);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  div {
+    img {
+      width: 100%;
+    }
+    margin: auto 20px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    padding: 4px;
+    div {
+      margin: 0 10px;
+    }
+  }
 `;
 
 export { Hero, Wrapper, WrapperText, Button, OurPartner };
