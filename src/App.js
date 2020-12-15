@@ -11,9 +11,8 @@ function App() {
       <Switch>
         <Route exact path="/login" component={LoginContainer} />
         <Route
-          exact
           path="/"
-          children={() =>
+          render={() =>
             cookies.get("accessToken") ? (
               <LayoutContainer />
             ) : (

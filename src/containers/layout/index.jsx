@@ -5,9 +5,9 @@ import { FooterComponent } from "../../components/FooterComponent";
 import { LoaderComponent } from "../../components/LoaderComponent";
 import NavbarComponent from "../../components/NavbarComponent";
 import HomeContainer from "./HomeContainer";
+import CoursesContainer from "./CoursesContainer";
 
 export default function index() {
-  console.log();
   return (
     <div style={{ height: "100%" }}>
       <NavbarComponent />
@@ -17,9 +17,19 @@ export default function index() {
       <Switch>
         <Route
           path="/"
+          exact
           render={(props) => (
             <Suspense fallback={<LoaderComponent show={true} />}>
               <HomeContainer {...props} />
+            </Suspense>
+          )}
+        />
+        <Route
+          path="/courses"
+          exact
+          render={(props) => (
+            <Suspense fallback={<LoaderComponent show={true} />}>
+              <CoursesContainer {...props} />
             </Suspense>
           )}
         />

@@ -1,6 +1,7 @@
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import {
   Collapse,
   Container,
@@ -15,12 +16,14 @@ import "../css/navbar.css";
 
 const NavbarComponent = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const history = useHistory();
 
   const toggle = () => setIsOpen(!isOpen);
+  const redirect = (page) => history.push(page);
   return (
     <Navbar expand="md" light>
       <Container>
-        <NavbarBrand href="/">
+        <NavbarBrand onClick={() => redirect("/")}>
           <img
             src="https://refactory.id/wp-content/uploads/2020/01/refactory-hd-125x52.png"
             alt="refactory logo"
@@ -32,19 +35,19 @@ const NavbarComponent = () => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavItem>
-              <NavLink href="/">Home</NavLink>
+              <NavLink onClick={() => redirect("/")}>Home</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/">Courses</NavLink>
+              <NavLink onClick={() => redirect("/courses")}>Courses</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/">Custom Training</NavLink>
+              <NavLink onClick={() => redirect("/")}>Custom Training</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/">Case Studies</NavLink>
+              <NavLink onClick={() => redirect("/")}>Case Studies</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/">Blogs</NavLink>
+              <NavLink onClick={() => redirect("/blogs")}>Blogs</NavLink>
             </NavItem>
           </Nav>
         </Collapse>
