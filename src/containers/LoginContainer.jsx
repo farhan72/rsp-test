@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import cookies from "js-cookie";
 import { authAPI } from "../api/baseAPI";
 import { Form, Input, Button, Row, Col, Alert } from "antd";
+import { Redirect, useHistory } from "react-router-dom";
 const layout = {
   labelCol: {
     span: 4,
@@ -12,6 +13,7 @@ const layout = {
 };
 
 export default function LoginContainer() {
+  const history = useHistory();
   const [status, setStatus] = useState({
     error: false,
     message: "",
@@ -34,6 +36,7 @@ export default function LoginContainer() {
             expires: 7,
             path: "/",
           });
+          history.push("/");
         }
       })
       .catch((error) => {
@@ -47,6 +50,10 @@ export default function LoginContainer() {
         }
       });
   };
+
+  if (cookies.get("accessToken")) {
+    return <Redirect to="/" />;
+  }
 
   return (
     <Row
