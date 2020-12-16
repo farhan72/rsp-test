@@ -26,7 +26,7 @@ export const BlogsContainer = () => {
     <Jumbotron fluid className="bg-white">
       <Container>
         <Row>
-          <Col md={8} sm={8}>
+          <Col md={8} sm={6}>
             <Row>
               {blogList?.map((blog, i) => (
                 <Col md={i === 0 ? 12 : 6} key={blog.id} className="mt-3 pt-3">
