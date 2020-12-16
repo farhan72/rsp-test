@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Col, Container, Jumbotron, Row } from "reactstrap";
 import { getBlogs, getPopularArticle } from "../../../api/services/blogService";
+import { CardBestArticle } from "../../../components/blogs/CardBestArticle";
 import { CategoryCardContainer } from "../../../components/blogs/CategoryCardContainer";
 import { RightSectionUsContainer } from "../../../components/blogs/RightSectionUsContainer";
+import { WrapperBestArticle } from "../../../styled-components/blogs/blogs";
 
 export const BlogsContainer = () => {
   const [blogList, setBlogList] = useState([]);
@@ -23,23 +25,42 @@ export const BlogsContainer = () => {
       .catch((error) => alert(error));
   };
   return (
-    <Jumbotron fluid className="bg-white">
-      <Container>
-        <Row>
-          <Col md={8} sm={6}>
-            <Row>
-              {blogList?.map((blog, i) => (
-                <Col md={i === 0 ? 12 : 6} key={blog.id} className="mt-3 pt-3">
-                  <CategoryCardContainer key={blog.id} blog={blog} />
-                </Col>
-              ))}
-            </Row>
-          </Col>
-          <Col>
-            <RightSectionUsContainer articles={articles} />
-          </Col>
-        </Row>
-      </Container>
-    </Jumbotron>
+    <>
+      <Jumbotron fluid className="bg-white">
+        <Container>
+          <Row>
+            <Col md={8} sm={6}>
+              <Row>
+                {blogList?.map((blog, i) => (
+                  <Col
+                    md={i === 0 ? 12 : 6}
+                    key={blog.id}
+                    className="mt-3 pt-3"
+                  >
+                    <CategoryCardContainer key={blog.id} blog={blog} />
+                  </Col>
+                ))}
+              </Row>
+            </Col>
+            <Col>
+              <RightSectionUsContainer articles={articles} />
+            </Col>
+          </Row>
+        </Container>
+      </Jumbotron>
+      <Jumbotron fluid>
+        <WrapperBestArticle className="text-center">
+          <h2>Artikel Unggulan</h2>
+          <Row className="justify-content-center align-items-center">
+            <Col md={3} sm={4}>
+              <CardBestArticle />
+            </Col>
+            <Col md={3} sm={4}>
+              <CardBestArticle />
+            </Col>
+          </Row>
+        </WrapperBestArticle>
+      </Jumbotron>
+    </>
   );
 };

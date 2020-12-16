@@ -6,6 +6,7 @@ import NavbarComponent from "../../components/NavbarComponent";
 import HomeContainer from "./HomeContainer";
 import CoursesContainer from "./CoursesContainer";
 import BlogsContainer from "./blogs";
+import Page from "./Page";
 
 function Index() {
   return (
@@ -17,7 +18,9 @@ function Index() {
           exact
           render={(props) => (
             <Suspense fallback={<LoaderComponent show={true} />}>
-              <HomeContainer {...props} />
+              <Page title="Home">
+                <HomeContainer {...props} />
+              </Page>
             </Suspense>
           )}
         />
@@ -26,7 +29,9 @@ function Index() {
           exact
           render={(props) => (
             <Suspense fallback={<LoaderComponent show={true} />}>
-              <CoursesContainer {...props} />
+              <Page title="Courses">
+                <CoursesContainer {...props} />
+              </Page>
             </Suspense>
           )}
         />
@@ -35,7 +40,9 @@ function Index() {
           exact
           render={(props) => (
             <Suspense fallback={<LoaderComponent show={true} />}>
-              <BlogsContainer {...props} />
+              <Page title="Blog">
+                <BlogsContainer {...props} />
+              </Page>
             </Suspense>
           )}
         />
