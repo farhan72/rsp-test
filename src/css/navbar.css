@@ -23,6 +23,10 @@
   background-color: transparent;
 }
 
+.navbar-blue {
+  background-color: #003547 !important;
+}
+
 @media only screen and (max-width: 768px) {
   .navbar {
     background-color: rgba(0, 0, 0, 0.5);
@@ -30,7 +34,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 99999;
+    z-index: 2;
   }
   .navbar-nav {
     padding-top: 10px;

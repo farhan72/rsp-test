@@ -5,6 +5,7 @@ import { LoaderComponent } from "../../components/LoaderComponent";
 import NavbarComponent from "../../components/NavbarComponent";
 import HomeContainer from "./HomeContainer";
 import CoursesContainer from "./CoursesContainer";
+import BlogsContainer from "./blogs";
 
 function Index() {
   return (
@@ -26,6 +27,15 @@ function Index() {
           render={(props) => (
             <Suspense fallback={<LoaderComponent show={true} />}>
               <CoursesContainer {...props} />
+            </Suspense>
+          )}
+        />
+        <Route
+          path="/blogs"
+          exact
+          render={(props) => (
+            <Suspense fallback={<LoaderComponent show={true} />}>
+              <BlogsContainer {...props} />
             </Suspense>
           )}
         />

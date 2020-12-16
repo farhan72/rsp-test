@@ -14,15 +14,20 @@ import {
 } from "reactstrap";
 import "../css/navbar.css";
 
-const NavbarComponent = ({ match }) => {
+const NavbarComponent = () => {
   const [isOpen, setIsOpen] = useState(false);
   const history = useHistory();
   const location = useLocation();
 
   const toggle = () => setIsOpen(!isOpen);
   const redirect = (page) => history.push(page);
+  const isActiveMenu = (pathName) => location.pathname === pathName;
   return (
-    <Navbar expand="md" light>
+    <Navbar
+      expand="md"
+      light
+      className={location.pathname === "/blogs" ? "navbar-blue" : ""}
+    >
       <Container>
         <NavbarBrand onClick={() => redirect("/")}>
           <img
@@ -38,7 +43,7 @@ const NavbarComponent = ({ match }) => {
             <NavItem>
               <NavLink
                 onClick={() => redirect("/")}
-                className={location.pathname === "/" ? "active" : ""}
+                className={isActiveMenu("/") ? "active" : ""}
               >
                 Home
               </NavLink>
@@ -46,7 +51,7 @@ const NavbarComponent = ({ match }) => {
             <NavItem>
               <NavLink
                 onClick={() => redirect("/courses")}
-                className={location.pathname === "/courses" ? "active" : ""}
+                className={isActiveMenu("/courses") ? "active" : ""}
               >
                 Courses
               </NavLink>
@@ -60,7 +65,7 @@ const NavbarComponent = ({ match }) => {
             <NavItem>
               <NavLink
                 onClick={() => redirect("/blogs")}
-                className={location.pathname === "/blogs" ? "active" : ""}
+                className={isActiveMenu("/blogs") ? "active" : ""}
               >
                 Blogs
               </NavLink>
