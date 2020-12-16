@@ -18,6 +18,7 @@ export default function NavbarBlogsComponent() {
   const location = useLocation();
 
   const toggle = () => setIsOpen(!isOpen);
+  const isActive = (pathName) => location.pathname === pathName;
   return (
     <NavBlogs>
       <Container className="text-center ">
@@ -29,7 +30,9 @@ export default function NavbarBlogsComponent() {
                 <FontAwesomeIcon icon={faTimes} />
               </span>
             </NavBlogsLink>
-            <NavBlogsLink>Blog</NavBlogsLink>
+            <NavBlogsLink style={isActive("/blogs") ? styles.active : null}>
+              Blog
+            </NavBlogsLink>
             <NavBlogsLink>Engineering</NavBlogsLink>
             <NavBlogsLink>Profile</NavBlogsLink>
             <NavBlogsLink>Tutorial</NavBlogsLink>
@@ -49,3 +52,9 @@ export default function NavbarBlogsComponent() {
     </NavBlogs>
   );
 }
+
+const styles = {
+  active: {
+    backgroundColor: "#008cbd",
+  },
+};
