@@ -40,7 +40,7 @@ export const RightSectionUsContainer = ({ articles }) => {
               <div className="icon">
                 <FontAwesomeIcon icon={faLinkedinIn} />
               </div>
-              <span className="icon list-text">Linkedin</span>
+              <span className="list-text">Linkedin</span>
             </li>
             <li onClick={() => openUrl("https://www.facebook.com/refactoryid")}>
               <div className="icon">

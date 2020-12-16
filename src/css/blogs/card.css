@@ -132,3 +132,20 @@ h2.card-title {
   background-color: #e48800;
   color: #ffffff;
 }
+
+@media only screen and (max-width: 768px) {
+  .list-group {
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .list-group li {
+    margin-right: 10px;
+  }
+  .list-group .list-text {
+    display: none;
+  }
+  h2.card-title {
+    font-size: 20px;
+  }
+}

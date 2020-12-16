@@ -29,7 +29,7 @@ export const BlogsContainer = () => {
       <Jumbotron fluid className="bg-white">
         <Container>
           <Row>
-            <Col md={8} sm={6}>
+            <Col md={8}>
               <Row>
                 {blogList?.map((blog, i) => (
                   <Col
@@ -51,14 +51,7 @@ export const BlogsContainer = () => {
       <Jumbotron fluid>
         <WrapperBestArticle className="text-center">
           <h2>Artikel Unggulan</h2>
-          <Row className="justify-content-center align-items-center">
-            <Col md={3} sm={4}>
-              <CardBestArticle />
-            </Col>
-            <Col md={3} sm={4}>
-              <CardBestArticle />
-            </Col>
-          </Row>
+          <CardBestArticle />
         </WrapperBestArticle>
       </Jumbotron>
     </>

@@ -16,7 +16,9 @@ const CardContent = styled.div`
   left: 0;
   top: 0;
   height: 100%;
+  width: 100%;
   text-align: center;
+  justify-content: center;
   align-items: center;
   display: none;
   cursor: pointer;
@@ -58,4 +60,59 @@ const CardBaseArticle = styled(Card)`
   }
 `;
 
-export { WrapperBestArticle, CardBaseArticle, CardContent };
+const arrowPosition = (arrow, left, right, top, bottom) => {
+  switch (arrow) {
+    case "left":
+      return `
+      right: ${right};
+      top: ${top};
+      `;
+    case "right":
+      return `
+      left: ${left};
+      margin-left: 100%;
+      bottom: ${bottom};
+      `;
+    default:
+      return;
+  }
+};
+
+const Circle = styled.button`
+  outline: none;
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  border-radius: 50%;
+  border: 2px solid #b0acaa;
+  color: #b0acaa;
+  text-align: center;
+  position: relative;
+
+  ${({ arrow }) => arrowPosition(arrow, "15px", "53%", "146px", "55px")}
+
+  &:focus {
+    outline: none;
+  }
+
+  svg {
+    position: relative;
+    bottom: 11px;
+    ${({ arrow }) => {
+      switch (arrow) {
+        case "left":
+          return `left: -5px;`;
+        case "right":
+          return `left: -3px;`;
+        default:
+          return;
+      }
+    }}
+  }
+
+  @media only screen and (max-width: 768px) {
+    ${({ arrow }) => arrowPosition(arrow, "12px", "59%", "146px", "53px")}
+  }
+`;
+
+export { WrapperBestArticle, CardBaseArticle, CardContent, Circle };
