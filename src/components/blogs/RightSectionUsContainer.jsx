@@ -9,8 +9,6 @@ import {
   CardTitle,
   CardText,
   Jumbotron,
-  ListGroup,
-  ListGroupItem,
 } from "reactstrap";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -42,9 +40,7 @@ export const RightSectionUsContainer = ({ articles }) => {
               <div className="icon">
                 <FontAwesomeIcon icon={faLinkedinIn} />
               </div>
-              <span className="icon" className="list-text">
-                Linkedin
-              </span>
+              <span className="icon list-text">Linkedin</span>
             </li>
             <li onClick={() => openUrl("https://www.facebook.com/refactoryid")}>
               <div className="icon">
@@ -84,12 +80,12 @@ export const RightSectionUsContainer = ({ articles }) => {
                 <CardSubtitle tag="h6">{article.category}</CardSubtitle>
                 <CardTitle tag="h5">{article.content}</CardTitle>
                 <CardText>{article.description}</CardText>
-                <a href="">baca artikel</a>
+                <a href="!#">baca artikel</a>
               </CardBody>
             </Card>
           ))}
           <div className="button-link text-center">
-            <a href="" role="button">
+            <a href="!#" role="button">
               Artikel Lain <FontAwesomeIcon icon={faArrowRight} />
             </a>
           </div>
