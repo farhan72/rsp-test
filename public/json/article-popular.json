@@ -1,0 +1,16 @@
+{
+  "data": [
+    {
+      "id": 0,
+      "category": "engineering",
+      "imageUrl": "../image/blogs/software-dev-hero-e1594180234375(1).jpg",
+      "content": "Bekerja Dengan Ticket: Bagian I"
+    },
+    {
+      "id": 1,
+      "category": "tips & trick",
+      "imageUrl": "../image/blogs/059-Refactory-10HalPentingSebelumMengikutiOnlineBootcamp012.png",
+      "content": "10 Hal Penting Dalam Memilih Online Bootcamp"
+    }
+  ]
+}

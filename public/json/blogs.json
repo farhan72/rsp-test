@@ -1,0 +1,39 @@
+{
+  "data": [
+    {
+      "id": 0,
+      "category": "growth & culture",
+      "content": "How Did You Become A Programmer?",
+      "imageUrl": "../image/blogs/063-Refactory-HDYBAP017.jpg",
+      "description": "Post Categories Blog Engineering Profile Tutorial Tips & Trick Growth & Culture Newsroom Promo X Case Studies Training PT Gigaming Intermedia Solusindo BY Isna | July 16, 2020"
+    },
+    {
+      "id": 1,
+      "category": "tips & trick",
+      "content": "Tempat Yang Asyik Untuk Belajar Secara Remote",
+      "imageUrl": "../image/blogs/061-Refactory-TempatYangAsyikUntukBelajarSecaraRemote011.jpg",
+      "description": "Berpikir tentang tempat-tempat yang menarik untuk hangout bersama teman-"
+    },
+    {
+      "id": 2,
+      "category": "newsroom",
+      "content": "Bank Mandiri Gandeng Refactory Tingkatkan SDM IT",
+      "imageUrl": "../image/blogs/IMG_4371-scaled(1).jpg",
+      "description": "Bank milik pemerintah, Bank Mandiri menggandeng bootcamp informasi"
+    },
+    {
+      "id": 3,
+      "category": "engineering",
+      "content": "Part 1: Membangun Microservice Sederhana Menggunakan GO – GO Micro",
+      "imageUrl": "../image/blogs/060-Refactory-Part1MembangunMicroserviceSederhanaMenggunakanGOGOMicro011-1.png",
+      "description": "Ada baiknya sebelum memulai ngoding (mohon bersabar ya..) kita mengenal"
+    },
+    {
+      "id": 4,
+      "category": "tips & trick",
+      "content": "10 Hal Penting Dalam Memilih Online Bootcamp",
+      "imageUrl": "../image/blogs/059-Refactory-10HalPentingSebelumMengikutiOnlineBootcamp012.png",
+      "description": "Tentunya berbagai alasan kita untuk mengikuti coding bootcamp, di antaranya"
+    }
+  ]
+}
