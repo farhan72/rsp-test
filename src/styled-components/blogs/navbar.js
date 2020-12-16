@@ -70,6 +70,7 @@ const NavBlogsLink = styled.a`
   color: #ffffff;
   text-align: center;
   display: inline-block;
+  font-size: 16px;
 
   &:hover:not(.icon) {
     transition: 0.5s;
