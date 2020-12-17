@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   Card,
   CardImg,
@@ -22,7 +23,9 @@ export const CategoryCardComponent = ({ blog }) => {
           </CardSubtitle>
           <CardTitle tag="h2">{blog.content}</CardTitle>
           <CardText className="text-muted">{blog.description}</CardText>
-          <a href="!#">baca artikel</a>
+          <Link to={"/post/" + blog.content.replace(/ /g, "-").toLowerCase()}>
+            <a href="!#">baca artikel</a>
+          </Link>
         </CardBody>
       </Card>
     </>

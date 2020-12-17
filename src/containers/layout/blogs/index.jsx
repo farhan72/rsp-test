@@ -1,7 +1,7 @@
 import React from "react";
 import { Route } from "react-router-dom";
 import NavbarBlogsComponent from "../../../components/blogs/NavbarBlogsComponent";
-import { BlogsContainer } from "./BlogsContainer";
+import BlogsContainer from "./BlogsContainer";
 
 const Index = () => {
   return (

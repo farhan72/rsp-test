@@ -26,7 +26,7 @@ export const RightSectionUsComponent = ({ articles }) => {
     <Row>
       <Col md={12} sm={12}></Col>
       <Col md={12} sm={12}>
-        <Jumbotron className="bg-white">
+        <Jumbotron className="bg-none">
           <h2 className="title-h2">HUBUNGKAN DENGAN KAMI</h2>
           <h2 className="heading-title">Ikuti refactory</h2>
           <ul className="list-group">
@@ -64,7 +64,7 @@ export const RightSectionUsComponent = ({ articles }) => {
             </li>
           </ul>
         </Jumbotron>
-        <Jumbotron fluid className="bg-light">
+        <Jumbotron fluid className="bg-own-light">
           <h5 className="text-center title">ARTIKEL POPULER</h5>
           {articles?.map((article) => (
             <Card key={article.id}>

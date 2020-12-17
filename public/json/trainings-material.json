@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "id": 0,
+      "materialName": "training mandiri",
+      "image": "https://i2.wp.com/refactory.id/wp-content/uploads/2020/01/IMG_4249.jpg?fit=540%2C320&ssl=1",
+      "descMaterial": "Untuk meningkatkan performa dari existing app yang sudah ada, PT Pindad merasa perlu untuk upgrade skill menggunakan bahasa pemrograman NodeJS. Goalnya yaitu dapat meningkatkan performa aplikasi yang digunakan oleh internal perusahaan / meningkatakan performa bisnis."
+    },
+    {
+      "id": 1,
+      "materialName": "training pindad",
+      "image": "https://i1.wp.com/refactory.id/wp-content/uploads/2020/01/DSCF6162-2-1.jpg?fit=540%2C320&ssl=1",
+      "descMaterial": "Untuk meningkatkan performa dari existing app yang sudah ada, PT Pindad merasa perlu untuk upgrade skill menggunakan bahasa pemrograman NodeJS. Goalnya yaitu dapat meningkatkan performa aplikasi yang digunakan oleh internal perusahaan / meningkatakan performa bisnis."
+    },
+    {
+      "id": 2,
+      "materialName": "training universitas terbuka",
+      "image": "https://i2.wp.com/refactory.id/wp-content/uploads/2020/01/DSCF6289-1.jpg?fit=540%2C320&ssl=1",
+      "descMaterial": "Untuk meningkatkan performa dari existing app yang sudah ada, PT Pindad merasa perlu untuk upgrade skill menggunakan bahasa pemrograman NodeJS. Goalnya yaitu dapat meningkatkan performa aplikasi yang digunakan oleh internal perusahaan / meningkatakan performa bisnis."
+    }
+  ]
+}

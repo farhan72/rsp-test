@@ -83,6 +83,12 @@ h2.heading-title {
   font-size: 12px;
   letter-spacing: 2.5px;
   margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.card .card-subtitle:hover {
+  transition: all 0.5s ease;
+  color: #ffa41b;
 }
 
 .card .card-title {
@@ -131,6 +137,10 @@ h2.card-title {
   transition: all 0.5s ease;
   background-color: #e48800;
   color: #ffffff;
+}
+
+.bg-own-light {
+  background-color: #f9f9f9;
 }
 
 @media only screen and (max-width: 768px) {

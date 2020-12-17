@@ -9,7 +9,7 @@ import "../../../css/blogs/card.css";
 import PostDataComponent from "../../../components/blogs/PostDataComponent";
 import ProjectsUsComponent from "../../../components/blogs/ProjectsUsComponent";
 
-export const BlogsContainer = () => {
+export default function BlogsContainer() {
   const [blogList, setBlogList] = useState([]);
   const [articles, setArticles] = useState([]);
 
@@ -69,4 +69,4 @@ export const BlogsContainer = () => {
       </Jumbotron>
     </>
   );
-};
+}
