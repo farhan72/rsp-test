@@ -51,7 +51,7 @@ const ProjectsUsComponent = ({ dataList }) => {
         ))}
       </Slider>
 
-      <div>
+      <div className="d-flex justify-content-center">
         <ButtonLoadMore>
           Load More <FontAwesomeIcon icon={faArrowRight} />
         </ButtonLoadMore>

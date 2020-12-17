@@ -32,7 +32,7 @@ export const BlogsContainer = () => {
       <Jumbotron fluid className="bg-white">
         <Container>
           <Row>
-            <Col md={8}>
+            <Col md={8} className="col-ipad-12">
               <Row>
                 {blogList?.map((blog, i) => (
                   <Col
@@ -59,10 +59,10 @@ export const BlogsContainer = () => {
       </Jumbotron>
       <Jumbotron fluid className="bg-white pb-0">
         <Row>
-          <Col md={8} sm={12} className="mt-md-4">
+          <Col md={8} sm={12} className="mt-md-4 col-ipad-12">
             <PostDataComponent />
           </Col>
-          <Col md={3} sm="auto">
+          <Col md={3} sm="auto" className="col-ipad-12">
             <ProjectsUsComponent />
           </Col>
         </Row>

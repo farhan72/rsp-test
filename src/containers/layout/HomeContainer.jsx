@@ -35,7 +35,7 @@ export default function HomeContainer() {
         heroImage={require("../../img/banner/hero-homepage.jpg").default}
       >
         <Container className="my-auto">
-          <Wrapper>
+          <Wrapper className="top-ipad-12">
             <WrapperText>
               <h1>
                 Empowering <span>People</span> Through Programming
@@ -118,7 +118,12 @@ export default function HomeContainer() {
         <Container className="text-center">
           <Row className="align-items-center justify-content-center">
             {seeOnList?.map((item) => (
-              <Col className="column-image" md={4} sm={6} key={item.id}>
+              <Col
+                className="column-image col-ipad-10"
+                md={4}
+                sm={6}
+                key={item.id}
+              >
                 <a href={item.link_url}>
                   <img src={item.photo_url} alt="item.name" />
                 </a>

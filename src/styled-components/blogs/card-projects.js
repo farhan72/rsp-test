@@ -87,7 +87,7 @@ const ButtonLoadMore = styled.button`
   border: 1px solid #e48800;
   position: relative;
   top: 35px;
-  left: 20%;
+  /* left: 20%; */
   transform: translateX(6%);
 
   &:hover {
