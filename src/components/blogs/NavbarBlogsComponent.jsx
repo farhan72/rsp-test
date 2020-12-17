@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useHistory, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { Container } from "reactstrap";
 import {
   NavbarBlogs,
@@ -14,7 +14,6 @@ import {
 
 export default function NavbarBlogsComponent() {
   const [isOpen, setIsOpen] = useState(false);
-  const history = useHistory();
   const location = useLocation();
 
   const toggle = () => setIsOpen(!isOpen);

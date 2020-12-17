@@ -2,7 +2,6 @@ const {
   POST_LOADING,
   POST_SUCCESS,
   POST_FAILURE,
-  GET_PROJECTS,
 } = require("../actions/postList.action");
 
 const initialState = {
