@@ -5,7 +5,7 @@ import { LoaderComponent } from "../../components/LoaderComponent";
 import NavbarComponent from "../../components/NavbarComponent";
 import HomeContainer from "./HomeContainer";
 import CoursesContainer from "./CoursesContainer";
-import BlogsContainer from "./blogs";
+import Blogs from "./blogs";
 import Page from "./Page";
 import { WhatsAppComponent } from "../../components/WhatsAppComponent";
 
@@ -42,7 +42,7 @@ function Index() {
           render={(props) => (
             <Suspense fallback={<LoaderComponent show={true} />}>
               <Page title="Blog">
-                <BlogsContainer {...props} />
+                <Blogs {...props} />
               </Page>
             </Suspense>
           )}

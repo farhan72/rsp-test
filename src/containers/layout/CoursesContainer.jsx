@@ -23,9 +23,7 @@ export default function CoursesContainer() {
   }, []);
   return (
     <>
-      <BannerComponent
-        heroImage={require("../../img/banner/hero-courses.jpg").default}
-      >
+      <BannerComponent heroImage="https://refactory.id/wp-content/uploads/2020/01/IMG_7378.jpg">
         <Wrapper>
           <WrapperCourses>
             <div>

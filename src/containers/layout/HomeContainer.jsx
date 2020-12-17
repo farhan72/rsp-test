@@ -31,9 +31,7 @@ export default function HomeContainer() {
   };
   return (
     <>
-      <BannerComponent
-        heroImage={require("../../img/banner/hero-homepage.jpg").default}
-      >
+      <BannerComponent heroImage="https://refactory.id/wp-content/uploads/2020/01/hero-homepage.jpg">
         <Container className="my-auto">
           <Wrapper className="top-ipad-12">
             <WrapperText>
