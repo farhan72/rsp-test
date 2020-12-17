@@ -49,7 +49,9 @@ export default function HomeContainer() {
             </WrapperText>
             <div>
               <Button>Temukan Solusi Anda</Button>
-              <Button outline>Tingkatkan Skill Anda</Button>
+              <Button ml outline>
+                Tingkatkan Skill Anda
+              </Button>
             </div>
           </Wrapper>
         </Container>

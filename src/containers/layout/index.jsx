@@ -7,6 +7,7 @@ import HomeContainer from "./HomeContainer";
 import CoursesContainer from "./CoursesContainer";
 import BlogsContainer from "./blogs";
 import Page from "./Page";
+import { WhatsAppComponent } from "../../components/WhatsAppComponent";
 
 function Index() {
   return (
@@ -48,6 +49,7 @@ function Index() {
         />
       </Switch>
       <FooterComponent />
+      <WhatsAppComponent />
     </div>
   );
 }

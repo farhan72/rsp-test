@@ -1,7 +1,7 @@
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 import {
   Collapse,
   Container,
@@ -17,9 +17,10 @@ import "../css/navbar.css";
 const NavbarComponent = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const history = useHistory();
 
   const toggle = () => setIsOpen(!isOpen);
-  const redirect = (page) => (window.location.href = page);
+  const redirect = (page) => history.push(page);
   const isActiveMenu = (pathName) => location.pathname === pathName;
   return (
     <Navbar
