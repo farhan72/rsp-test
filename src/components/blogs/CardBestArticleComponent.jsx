@@ -12,16 +12,16 @@ import {
 } from "../icons/ArrowComponent";
 import { getBestArticles } from "../../api/services/blogService";
 
-export const CardBestArticle = (props) => {
+export const CardBestArticleComponent = (props) => {
   const [articles, setArticles] = useState([]);
   const settings = {
     dots: false,
     infinite: true,
-    speed: 1500,
+    speed: 2000,
     slidesToShow: 3,
     slidesToScroll: 3,
     autoplay: true,
-    autoplaySpeed: 1500,
+    autoplaySpeed: 2000,
     pauseOnHover: true,
     nextArrow: <NextArrowComponent {...props} />,
     prevArrow: <PrevArrowComponent {...props} />,

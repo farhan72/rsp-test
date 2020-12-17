@@ -14,3 +14,17 @@
 .slick-next:before {
   display: none;
 }
+
+.slick-dots li button {
+  background-color: #aaaaaa;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.slick-dots li.slick-active button {
+  border: 1px solid #aaaaaa;
+  background-color: transparent;
+}
+.slick-dots li button::before {
+  content: "";
+}

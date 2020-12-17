@@ -1,0 +1,38 @@
+{
+  "postList": [
+    {
+      "id": 0,
+      "category": "engineering",
+      "content": "Teknik Mengaplikasikan Pagination: OFFSET Vs SEEK Pagination",
+      "image": "https://i1.wp.com/refactory.id/wp-content/uploads/2020/02/056-Refactory-TeknikMengaplikasikanPagination011.jpg?fit=768%2C403&ssl=1",
+      "description": "Pagination adalah suatu metode untuk membagi suatu dokumen/resource"
+    },
+    {
+      "id": 1,
+      "category": "newsroom",
+      "content": "Pangkas Jarak Dan Waktu, Online Bootcamp Programming Jadi Solusi",
+      "image": "https://i2.wp.com/refactory.id/wp-content/uploads/2020/02/058-Refactory-PangkasJarakdanWaktuOnlineBootcampProgrammingJadiSolusi011.png?fit=768%2C403&ssl=1",
+      "description": "Semakin baiknya infrastruktur internet, termasuk teknologi perangkat keras"
+    }
+  ],
+  "caseStudies": [
+    {
+      "id": 0,
+      "nameProduct": "training qasir",
+      "image": "https://i0.wp.com/refactory.id/wp-content/uploads/2020/07/group-18@3x.png?fit=540%2C320&ssl=1",
+      "descProduct": "Qasir merupakan sebuah aplikasi yang diharapkan dapat membantu pedagang dalam mencatat penjualan, mengelola produk, mengawasi stok, dan memantau laporan transaksi."
+    },
+    {
+      "id": 1,
+      "nameProduct": "training modana.id",
+      "image": "https://i0.wp.com/refactory.id/wp-content/uploads/2020/07/group-18@3x.png?fit=540%2C320&ssl=1",
+      "descProduct": "Modana.id adalah Aplikasi Mobile yang fokus terhadap solusi Sistem Manajemen Sumber Daya Manusia (Human Resources). Aplikasi ini didesain untuk bisnis, pengusaha dan karyawan untuk dapat bekerja serta berinteraksi secara langsung dengan mengelola informasi karyawan, presensi/ absensi secara otomatisasi dengan keterlibatan manusia yang sangat minim."
+    },
+    {
+      "id": 2,
+      "nameProduct": "Project PT. Pindad (Persero)",
+      "image": "https://i2.wp.com/refactory.id/wp-content/uploads/2020/07/WhatsApp-Image-2020-07-16-at-14.53.14.jpeg?fit=540%2C320&ssl=1",
+      "descProduct": "Pindad merupakan salah satu BUMN yang saat ini mempunyai kepentingan untuk melakukan improvisasi terhadap aplikasi lunak yang telah mereka miliki. Improvisasi tersebut baik dari sisi performa, tampilan, dan kegunannya."
+    }
+  ]
+}

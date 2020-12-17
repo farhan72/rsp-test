@@ -6,4 +6,6 @@ const getPopularArticle = () => Axios.get("./json/article-popular.json");
 
 const getBestArticles = () => Axios.get("./json/best-articles.json");
 
-export { getBlogs, getPopularArticle, getBestArticles };
+const getPostData = () => Axios.get("./json/post-list.json");
+
+export { getBlogs, getPopularArticle, getBestArticles, getPostData };

@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Col, Container, Jumbotron, Row } from "reactstrap";
 import { getBlogs, getPopularArticle } from "../../../api/services/blogService";
-import { CardBestArticle } from "../../../components/blogs/CardBestArticle";
-import { CategoryCardContainer } from "../../../components/blogs/CategoryCardContainer";
-import { RightSectionUsContainer } from "../../../components/blogs/RightSectionUsContainer";
+import { CardBestArticleComponent } from "../../../components/blogs/CardBestArticleComponent";
+import { CategoryCardComponent } from "../../../components/blogs/CategoryCardComponent";
+import { RightSectionUsComponent } from "../../../components/blogs/RightSectionUsComponent";
 import { WrapperBestArticle } from "../../../styled-components/blogs/blogs";
+import "../../../css/blogs/card.css";
+import PostDataComponent from "../../../components/blogs/PostDataComponent";
+import ProjectsUsComponent from "../../../components/blogs/ProjectsUsComponent";
 
 export const BlogsContainer = () => {
   const [blogList, setBlogList] = useState([]);
@@ -37,13 +40,13 @@ export const BlogsContainer = () => {
                     key={blog.id}
                     className="mt-3 pt-3"
                   >
-                    <CategoryCardContainer key={blog.id} blog={blog} />
+                    <CategoryCardComponent key={blog.id} blog={blog} />
                   </Col>
                 ))}
               </Row>
             </Col>
             <Col>
-              <RightSectionUsContainer articles={articles} />
+              <RightSectionUsComponent articles={articles} />
             </Col>
           </Row>
         </Container>
@@ -51,8 +54,18 @@ export const BlogsContainer = () => {
       <Jumbotron fluid>
         <WrapperBestArticle className="text-center">
           <h2>Artikel Unggulan</h2>
-          <CardBestArticle />
+          <CardBestArticleComponent />
         </WrapperBestArticle>
+      </Jumbotron>
+      <Jumbotron fluid className="bg-white pb-0">
+        <Row>
+          <Col md={8} sm={12} className="mt-md-4">
+            <PostDataComponent />
+          </Col>
+          <Col md={3} sm="auto">
+            <ProjectsUsComponent />
+          </Col>
+        </Row>
       </Jumbotron>
     </>
   );

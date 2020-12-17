@@ -20,7 +20,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import "../../css/blogs/card.css";
 
-export const RightSectionUsContainer = ({ articles }) => {
+export const RightSectionUsComponent = ({ articles }) => {
   const openUrl = (url) => window.open(url);
   return (
     <Row>

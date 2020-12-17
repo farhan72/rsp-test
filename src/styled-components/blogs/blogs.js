@@ -23,6 +23,7 @@ const CardContent = styled.div`
   display: none;
   cursor: pointer;
   animation: overlay 0.5s ease;
+  text-transform: capitalize;
 
   a {
     color: #fff;

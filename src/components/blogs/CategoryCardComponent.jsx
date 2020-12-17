@@ -9,12 +9,12 @@ import {
 } from "reactstrap";
 import "../../css/blogs/card.css";
 
-export const CategoryCardContainer = ({ blog }) => {
+export const CategoryCardComponent = ({ blog }) => {
   return (
     <>
       <Card>
         <div className="inner">
-          <CardImg top width="100%" src={blog.imageUrl} alt="Card image cap" />
+          <CardImg top width="100%" src={blog.imageUrl} alt={blog.category} />
         </div>
         <CardBody className="pl-0">
           <CardSubtitle tag="h6" className="mb-2">
@@ -22,7 +22,7 @@ export const CategoryCardContainer = ({ blog }) => {
           </CardSubtitle>
           <CardTitle tag="h2">{blog.content}</CardTitle>
           <CardText className="text-muted">{blog.description}</CardText>
-          <a href="">baca artikel</a>
+          <a href="!#">baca artikel</a>
         </CardBody>
       </Card>
     </>
