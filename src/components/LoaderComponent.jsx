@@ -2,11 +2,11 @@ import React from "react";
 import { Spinner } from "reactstrap";
 
 export const LoaderComponent = ({ show }) => {
-  return (
+  return show ? (
     <div style={styles.overlay}>
       <Spinner type="grow" color="info" />
     </div>
-  );
+  ) : null;
 };
 
 const styles = {

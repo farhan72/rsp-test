@@ -19,7 +19,7 @@ export default function LoginContainer() {
     error: false,
     message: "",
   });
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   const login = (values) => {
     callAPILogin(values);
