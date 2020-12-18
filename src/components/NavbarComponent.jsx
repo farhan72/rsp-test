@@ -16,6 +16,7 @@ import "../css/navbar.css";
 
 const NavbarComponent = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const menusNotBlog = ["/", "courses"];
   const location = useLocation();
   const history = useHistory();
 
@@ -25,8 +26,10 @@ const NavbarComponent = () => {
   return (
     <Navbar
       expand="md"
-      light
-      className={location.pathname === "/blogs" ? "navbar-blue" : ""}
+      lightblogs="true"
+      className={
+        menusNotBlog.indexOf(location.pathname) < 0 ? "navbar-blue" : ""
+      }
     >
       <Container>
         <NavbarBrand onClick={() => redirect("/")}>

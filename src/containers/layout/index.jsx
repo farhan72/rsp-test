@@ -5,9 +5,11 @@ import { LoaderComponent } from "../../components/LoaderComponent";
 import NavbarComponent from "../../components/NavbarComponent";
 import HomeContainer from "./HomeContainer";
 import CoursesContainer from "./CoursesContainer";
-import Blogs from "./blogs";
 import Page from "./Page";
 import { WhatsAppComponent } from "../../components/WhatsAppComponent";
+import PageBlog from "./PageBlog";
+import Blogs from "./blogs";
+import BlogDetailContainer from "./blogs/BlogDetailContainer";
 
 function Index() {
   return (
@@ -44,6 +46,17 @@ function Index() {
               <Page title="Blog">
                 <Blogs {...props} />
               </Page>
+            </Suspense>
+          )}
+        />
+        <Route
+          path="/post/:prefix"
+          exact
+          render={(props) => (
+            <Suspense fallback={<LoaderComponent show={true} />}>
+              <PageBlog {...props}>
+                <BlogDetailContainer />
+              </PageBlog>
             </Suspense>
           )}
         />

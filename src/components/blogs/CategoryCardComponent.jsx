@@ -24,7 +24,7 @@ export const CategoryCardComponent = ({ blog }) => {
           <CardTitle tag="h2">{blog.content}</CardTitle>
           <CardText className="text-muted">{blog.description}</CardText>
           <Link to={"/post/" + blog.content.replace(/ /g, "-").toLowerCase()}>
-            <a href="!#">baca artikel</a>
+            baca artikel
           </Link>
         </CardBody>
       </Card>

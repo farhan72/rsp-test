@@ -8,7 +8,7 @@ const getBestArticles = () => Axios.get("./json/best-articles.json");
 
 const getPostData = () => Axios.get("./json/post-list.json");
 
-const getTrainingMaterials = () => Axios.get("./json/trainings-material.json");
+const getTrainingMaterials = () => Axios.get("../json/trainings-material.json");
 
 export {
   getBlogs,
