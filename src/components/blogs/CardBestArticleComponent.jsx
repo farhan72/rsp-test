@@ -25,6 +25,15 @@ export const CardBestArticleComponent = (props) => {
     pauseOnHover: true,
     nextArrow: <NextArrowComponent {...props} />,
     prevArrow: <PrevArrowComponent {...props} />,
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   useEffect(() => {
